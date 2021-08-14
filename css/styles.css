@@ -1,0 +1,265 @@
+/*=========== Universal styles =========== */
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: blue;
+}
+
+
+html {
+  background-color: rgba(235, 236, 236, 0.5);
+}
+
+body {
+  background-color: white;
+}
+/*=========== Header styles =========== */
+
+.container {
+  background-color: rgba(235, 236, 236, 0.5);
+  padding: 10px 50px 20px 50px;
+}
+
+.main-header, .main-nav {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.main-header {
+  margin-top: .9em;
+  padding-bottom: 1em;
+  padding-left: 25px;
+}
+
+
+.name {
+  justify-content: center;
+  text-align: center;
+}
+
+.main-nav {
+  display: block;
+  text-align: center;
+  padding-left: 0;
+  margin-top: auto;
+}
+
+.main-nav {
+  list-style: none;
+  display: block;
+  padding: .5em;
+}
+
+.main-nav p {
+  padding: 0.50em;
+}
+
+.bio {
+  text-align: center;
+  padding-top: 1em;
+}
+
+.bio p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.image-bio {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  order: 1;
+  border-radius: 10%;
+
+}
+
+
+/*=========== Bio & Picture styles =========== */
+
+
+.second-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-bio {
+  order: -1;
+}
+
+.aboutme-container {
+  display: inline-block;
+}
+
+/*=========== Main Content =========== */
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.content-image {
+  width: 300px;
+  display: block;
+  border: 3px solid transparent;
+}
+
+.content-image:hover {
+  border: 3px solid purple;
+}
+
+.image-title {
+  font-weight: bold;
+  justify-content: center;
+  display: flex;
+}
+
+.image-description {
+  text-align: center;
+  align-self: center;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ h2 {
+   text-align: center;
+   margin-top: 50px;
+   padding: 30px 30px 15px 30px;
+ }
+
+/*=========== Footer =========== */
+
+.contact-info {
+  background-color: rgba(235, 236, 236, 0.5);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid rgba(128,128,128, 0.3);
+  padding: 0 40px 10px;
+  text-align: center;
+}
+
+.footer-nav {
+  list-style: none;
+  margin-left: auto;
+}
+
+.footer-name {
+  text-align: center;
+  align-self: center;
+}
+
+footer p {
+  text-align: center;
+}
+
+.footer-nav, .footer-items {
+  list-style: none;
+  margin-left: auto;
+  flex-direction: row;
+  display: flex;
+}
+
+.footer-items {
+  display: none;
+  margin-right: 8px;
+}
+
+/* =================== Media Queries ===================*/
+
+/* =================== Tablet ==========================*/
+
+@media screen and (min-width: 768px) {
+  .main-nav p {
+    flex-direction: row;
+    display: inline;
+  }
+
+  .image-bio {
+    width:200px;
+  }
+
+  .bio {
+    text-align: left;
+    align-items: flex-start;
+    padding: 1em;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .second-container {
+    flex-direction: row;
+    display: flex;
+  }
+
+  .image-bio {
+    order: 1;
+  }
+
+  .content-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .image-container {
+    width: 32%;
+    align-items: center;
+  }
+
+  .backtotop {
+    display: none;
+  }
+
+  .footer-items {
+    display: flex;
+    padding: .5em;
+  }
+
+  .footer-items p {
+    padding-left: 2em;
+  }
+}
+
+/* =================== Desktop ==========================*/
+
+@media (min-width: 1024px) {
+  .main-header {
+    flex-direction: row;
+    display: flex;
+  }
+
+  .main-nav p {
+    flex-direction: row;
+    display: inline;
+    padding-left: 32px;
+    padding-right: 0;
+  }
+
+  .main-nav {
+    margin-left: auto;
+  }
+
+  .image-container {
+    width: 24%;
+  }
+}
